@@ -37,6 +37,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     const fpath: string= await filterImageFromURL(imageUrl)
     if(fpath)
       resp.sendFile(fpath,()=>{
+        //I am using this variable to solve the "Argument of type 'string' is not assignable to parameter of type 'string[]'" error
         const _fpath= [fpath]
         deleteLocalFiles(_fpath)
     })

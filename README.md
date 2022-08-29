@@ -46,3 +46,7 @@ Prevent requests without valid authentication headers.
 
 Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+### an endpoint from Haile
+An endpoint URL for a running elastic beanstalk deployment (EB_URL) :
+http://cloud-developer-nanodegree-2nd-project-02222222222.us-east-1.elasticbeanstalk.com

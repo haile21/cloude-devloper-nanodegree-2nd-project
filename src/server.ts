@@ -30,12 +30,12 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   /**************************************************************************** */
 
   //! END @TODO1
-  app.get('/filteredimage', async (req,resp)=>{
+  app.get('/filteredimage', async (req: express.Request,resp: express.Response)=>{
     let {image_url} = req.query
     console.log('iamge url is:' +image_url)
     if(!image_url)
       return resp.status(422).send("image_url query parameter is required,please")
-    const fpath= await filterImageFromURL(<string>image_url)
+    const fpath: string= await filterImageFromURL(<string>image_url)
     console.log('local path: '+fpath)
     if(fpath){
       resp.status(200).sendFile(fpath)
